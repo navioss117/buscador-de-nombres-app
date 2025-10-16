@@ -48,8 +48,7 @@ def buscar_palabra_en_archivos(ruta_carpeta, palabra_clave):
                 for i, pagina in enumerate(paginas):
                     temp_img = f"temp_page_{i}.jpg"
                     pagina.save(temp_img, 'JPEG')
-                    texto_extraido += "\n" +
-extraer_texto_ocr_space(temp_img)
+texto_extraido += "\n" + extraer_texto_ocr_space(temp_img)
                     os.remove(temp_img)
             except:
                 continue
